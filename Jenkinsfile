@@ -1,9 +1,7 @@
 @Library("jenkins-shared-library@main")_
 
 pipeline{
-    agent{
-        any
-    }
+    agent any
     stages{
         stage("Hello World from Jenkins shared library"){
             steps{
