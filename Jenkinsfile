@@ -1,5 +1,18 @@
-@Library("belajar-jenkins-shared-library@main") _
+@Library("jenkins-shared-library")_
 
-pznPipeline([
-    type: "maven"
-])
+pipeline{
+    agent{
+        any
+    }
+    stages{
+        stage("Hello World from Jenkins shared library"){
+            steps{
+                echo "Using jenkins Shared library"
+                script{
+                    hello.world()
+                }
+            }
+
+        }
+    }
+}
