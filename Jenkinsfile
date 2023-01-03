@@ -18,7 +18,7 @@ pipeline{
         always {
             echo "Publish Notification build on Slack"
             script {
-                hello.post()
+                hello.posts()
 				// if (currentBuild.currentResult == 'SUCCESS') {
                 //     echo "Building Success"
                 //     slackSend (
