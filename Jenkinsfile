@@ -19,7 +19,7 @@ pipeline{
                     echo author.name()
                     echo author.asal()
                     // echo "Lengkap:", author()
-                    echo "name: 'author.name()'"
+                    // echo "name: 'author.name()'"
                     // echo "asal: 'author.asal()'"
                 }
             }
@@ -28,7 +28,7 @@ pipeline{
         stage("Maven build using parameter"){
             steps{
                 script{
-                    maven("clean compile")
+                    maven("test")
                 }
             }
         }
