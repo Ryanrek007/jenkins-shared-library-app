@@ -13,12 +13,18 @@ pipeline{
             }
 
         }
+        stage("Globall Variable"){
+            steps{
+                echo author.name()
+                echo author.asal()
+            }
+        }
     }
         post{
         always {
             echo "Publish Notification build on Slack"
             script {
-                hello.posts()
+                hello.post()
 				// if (currentBuild.currentResult == 'SUCCESS') {
                 //     echo "Building Success"
                 //     slackSend (
