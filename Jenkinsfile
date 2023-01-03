@@ -15,9 +15,9 @@ pipeline{
         }
         stage("Globall Variable"){
             steps{
-                echo "Lengkap: author()"
-                echo "name: author.name()"
-                echo "asal: author.asal()"
+                echo "Lengkap:" author()
+                echo "name:" author.name()
+                echo "asal:" author.asal()
             }
         }
     }
