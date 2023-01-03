@@ -11,16 +11,24 @@ pipeline{
                     hello.world()
                 }
             }
-
         }
         stage("Globall Variable"){
             steps{
-                echo author()
-                echo author.name()
-                echo author.asal()
-                // echo "Lengkap:", author()
-                // echo "name: 'author.name()'"
-                // echo "asal: 'author.asal()'"
+                script{
+                    echo author()
+                    echo author.name()
+                    echo author.asal()
+                    // echo "Lengkap:", author()
+                    echo "name: 'author.name()'"
+                    // echo "asal: 'author.asal()'"
+                }
+            }
+        }
+
+        stage("Maven build using parameter"){
+            steps{
+                script{
+                    maven("clean compile")
             }
         }
     }
