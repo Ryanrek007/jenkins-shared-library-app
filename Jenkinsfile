@@ -1,4 +1,4 @@
-@Library("jenkins-shared-library@main")_
+@Library("jenkins-shared-library@dev")_
 
 pipeline{
     agent any
@@ -6,6 +6,7 @@ pipeline{
         stage("Hello World from Jenkins shared library"){
             steps{
                 echo "Using jenkins Shared library"
+                echo "on dev branch"
                 script{
                     hello.world()
                 }
